@@ -86,16 +86,28 @@
         .modal('hide');
     }
 
+    function getContainer() {
+      return $element;
+    }
+
+    function setOptions($options) {
+      //$element.modal($options);
+    }
+
+
     var dialog = {
       open: false,
       returnValue: void(0),
       show: function () {
-        openDialog({show: false});
+        openDialog({show: true});
       },
       showModal: function () {
         openDialog({show: true});
       },
-      close: closeDialog
+      close: closeDialog,
+      container: getContainer,
+      options: setOptions,
+      handleDialogResize: function () {}
     };
 
     return dialog;
