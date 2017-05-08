@@ -89,8 +89,9 @@
     var dialog = {
       open: false,
       returnValue: void(0),
+      // @todo https://www.drupal.org/node/2831237
       show: function () {
-        openDialog({show: false});
+        openDialog({show: true});
       },
       showModal: function () {
         openDialog({show: true});
@@ -99,6 +100,19 @@
     };
 
     return dialog;
+  };
+
+  /**
+   * Current Bootstrap override doesn't have "off-canvas" dialog.
+   *
+   * @todo Either create an override for off-canvas.js
+   *   or handle regular and "off-canvas" within overridden Drupal.dialog
+   *
+   * @param options
+   * @return {Drupal.dialog|*}
+   */
+  Drupal.dialog.getDialogRenderer = function (options) {
+    return Drupal.dialog;
   };
 
 })(jQuery, Drupal, drupalSettings);
