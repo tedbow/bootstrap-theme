@@ -90,7 +90,7 @@
       open: false,
       returnValue: void(0),
       show: function () {
-        openDialog({show: false});
+        openDialog({show: true});
       },
       showModal: function () {
         openDialog({show: true});
