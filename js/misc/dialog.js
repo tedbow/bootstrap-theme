@@ -66,6 +66,11 @@
       settings = $.extend({}, drupalSettings.dialog, options, settings);
       // Trigger a global event to allow scripts to bind events to the dialog.
       $(window).trigger('dialog:beforecreate', [dialog, $element, settings]);
+      if(Drupal.offCanvas.isOffCanvas(dialog, $element, settings)) {
+        // invoke non-modal dialog
+        // ?? https://stackoverflow.com/questions/25670148/how-to-create-a-non-modal-bootstrap-dialog-box
+      }
+
       $element
         .modal(settings)
         .on('shown.bs.modal.drupal', function () {
