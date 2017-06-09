@@ -39,6 +39,8 @@ libraries-extend:
     - bootstrap/image_widget_crop
   views/views.ajax:
     - bootstrap/views.ajax
+  outside_in/drupal.off_canvas:
+    - bootstrap/drupal.off_canvas
 
 libraries-override:
   core/drupal.batch: bootstrap/drupal.batch
@@ -48,6 +50,7 @@ libraries-override:
   filter/drupal.filter: bootstrap/drupal.filter
   system/admin: false
   text/drupal.text: bootstrap/drupal.text
+  core/drupal.off_canvas: false
 
 # Remove individual stylesheets.
   system/base:

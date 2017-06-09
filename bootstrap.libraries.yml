@@ -118,6 +118,11 @@ drupal.dialog.ajax:
     - core/drupal.ajax
     - bootstrap/drupal.dialog
 
+drupal.off_canvas:
+  js:
+    js/misc/off-canvas.js: {}
+
+
 drupal.filter:
   version: VERSION
   js:
