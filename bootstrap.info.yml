@@ -50,7 +50,6 @@ libraries-override:
   filter/drupal.filter: bootstrap/drupal.filter
   system/admin: false
   text/drupal.text: bootstrap/drupal.text
-  core/drupal.off_canvas: false
 
 # Remove individual stylesheets.
   system/base:
