@@ -8,13 +8,14 @@
     return $element;
   };
 
-  Drupal.offCanvas.open = function (event, dialog, $element, settings) {
-    // Handle resizing and body displacement
+  Drupal.offCanvas.handleDialogResize = function () {
+
   };
-  Drupal.offCanvas.close = function (event, dialog, $element) {
-    // Handle body displacement
+  Drupal.offCanvas.resetSize = function () {
+
   };
-  Drupal.offCanvas.render = function (event, dialog, $element, settings) {
+
+  Drupal.offCanvas.bodyPadding = function () {
 
   };
 })(jQuery, Drupal);
